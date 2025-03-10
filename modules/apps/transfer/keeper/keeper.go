@@ -57,7 +57,7 @@ func NewKeeper(
 		authKeeper:     authKeeper,
 		bankKeeper:     bankKeeper,
 		scopedKeeper:   scopedKeeper,
-		addressHandler: types.SeiAddressHandler{},
+		addressHandler: types.SheAddressHandler{},
 	}
 }
 

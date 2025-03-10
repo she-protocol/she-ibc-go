@@ -1,12 +1,13 @@
 package types
 
 import (
+	"testing"
+
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
-func TestSeiAddressHandler_GetSeiAddressFromString(t *testing.T) {
+func TestSheAddressHandler_GetSheAddressFromString(t *testing.T) {
 	type args struct {
 		address string
 	}
@@ -42,8 +43,8 @@ func TestSeiAddressHandler_GetSeiAddressFromString(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			h := SeiAddressHandler{}
-			got, err := h.GetSeiAddressFromString(types.Context{}, tt.args.address)
+			h := SheAddressHandler{}
+			got, err := h.GetSheAddressFromString(types.Context{}, tt.args.address)
 			if tt.wantErr {
 				require.NotNil(t, err)
 				require.Equal(t, tt.wantErrMsg, err.Error())
